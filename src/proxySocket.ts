@@ -12,11 +12,11 @@ export type Option = {
 
 export type ConnectCallback = (err: Error, socket: Net.Socket) => void;
 
-const defaultCallback = (err:Error, _:Net.Socket) => {
+const defaultCallback = (err: Error, _: Net.Socket) => {
   console.log(err);
 };
 
-export default class ProxySocket {
+class ProxySocket {
   onConnect: ConnectCallback;
   options: Option;
   socket: Net.Socket;
@@ -65,7 +65,6 @@ export default class ProxySocket {
     ]);
     this.socket.write(cmdBuf);
     this.socket.once("data", (buf) => {
-      console.log(buf);
       if (buf[1] == 0) {
         this.notifyConnected();
       } else {
@@ -84,3 +83,10 @@ export default class ProxySocket {
     this.onConnect(null, this.socket);
   };
 }
+
+export const createConnection = (
+  options: Option,
+  onConnect: ConnectCallback
+) => {
+  new ProxySocket(options, onConnect);
+};
