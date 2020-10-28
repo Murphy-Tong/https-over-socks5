@@ -1,5 +1,5 @@
 {
-  "name": "node-server",
+  "name": "https-over-socks5",
   "version": "1.0.0",
   "description": "使用socks5协议转发nodejs https Api请求",
   "main": "./src/proxySocket.ts",
@@ -11,5 +11,8 @@
   "devDependencies": {
     "@types/node": "^14.14.5"
   },
-  "homepage": "https://github.com/Yotakot/https-over-socks5"
+  "homepage": "https://github.com/Yotakot/https-over-socks5",
+  "files":[
+    "/lib"
+  ]
 }
