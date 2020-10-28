@@ -14,5 +14,6 @@
   "homepage": "https://github.com/Yotakot/https-over-socks5",
   "files":[
     "/lib"
-  ]
+  ],
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
