@@ -1,5 +1,5 @@
 import * as https from "https";
-import * as ProxySocket from "../lib/proxySocket";
+import * as ProxySocket from "../lib/index";
 
 const HOST = "www.google.com";
 const PORT = 443;

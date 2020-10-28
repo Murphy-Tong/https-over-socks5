@@ -4,23 +4,10 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "sourceMap": true
+    // "sourceMap": true,
+    "outDir": "./lib",
+    "declaration": true
   },
-  "files": [
-    "core.ts",
-    "sys.ts",
-    "types.ts",
-    "scanner.ts",
-    "parser.ts",
-    "utilities.ts",
-    "binder.ts",
-    "checker.ts",
-    "emitter.ts",
-    "program.ts",
-    "commandLineParser.ts",
-    "tsc.ts",
-    "diagnosticInformationMap.generated.ts"
-  ],
-  "include": ["src/**/*", "lib/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

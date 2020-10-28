@@ -1,10 +1,16 @@
-# https-over-socks5
-
+# node-https-socks5-proxy
+###简介
 使用 socks5 代理转发 nodejs 的 http/https 请求
+###安装
+```
+npm i node-https-socks5-proxy
+```
+
+###使用
 
 ```javascript
 import * as https from "https";
-import * as ProxySocket from "./proxySocket";
+import * as ProxySocket from "node-https-socks5-proxy";
 
 const HOST = "www.google.com";
 const PORT = 443;
