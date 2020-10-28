@@ -4,7 +4,8 @@
   "description": "使用socks5协议转发nodejs https Api请求",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "ts-node ./test/test.ts"
+    "test": "ts-node ./test/index.ts",
+    "publish": "rm -rf ./lib & npx tsc -p tsconfig.json & npm publish"
   },
   "author": "",
   "license": "ISC",
@@ -12,8 +13,10 @@
     "@types/node": "^14.14.5"
   },
   "homepage": "https://github.com/Yotakot/https-over-socks5",
-  "files":[
+  "files": [
     "/lib"
   ],
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
