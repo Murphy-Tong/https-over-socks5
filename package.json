@@ -1,6 +1,6 @@
 {
   "name": "node-https-socks5-proxy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "使用socks5协议转发nodejs https Api请求",
   "main": "./lib/index.js",
   "scripts": {
