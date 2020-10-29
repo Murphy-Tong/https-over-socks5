@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "ts-node",
+            "request": "launch",
+            "type": "node",
+            "args": ["${relativeFile}"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "protocol": "inspector",
+            "cwd": "${workspaceRoot}",
+            "sourceMaps": true,
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "启动程序",
