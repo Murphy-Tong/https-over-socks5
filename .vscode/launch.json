@@ -1,21 +1,48 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "启动程序",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/src/index.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ],
-            "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"]
-        }
-    ]
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ts-node",
+      "request": "launch",
+      "type": "node",
+      "args": ["${relativeFile}"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "protocol": "inspector",
+      "cwd": "${workspaceRoot}",
+      "sourceMaps": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "启动程序",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"]
+    }
+  ]
 }
+
+// {
+//     // 使用 IntelliSense 了解相关属性。
+//     // 悬停以查看现有属性的描述。
+//     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+//     "version": "0.2.0",
+//     "configurations": [
+//       {
+//         "name": "Example",
+//         "type": "node",
+//         "request": "launch",
+//         "runtimeExecutable": "node",
+//         "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+//         "args": ["${relativeFile}"],
+//         "cwd": "${workspaceRoot}",
+//         "sourceMaps": true,
+//         "internalConsoleOptions": "openOnSessionStart",
+//         "skipFiles": ["<node_internals>/**", "node_modules/**"]
+//       }
+//     ]
+//   }
