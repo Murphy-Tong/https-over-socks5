@@ -15,11 +15,17 @@
     "typescript": "^4.0.5"
   },
   "homepage": "https://github.com/Yotakot/https-over-socks5",
+  "keywords": [
+    "node",
+    "proxy",
+    "https",
+    "socks5"
+  ],
   "files": [
     "/lib"
   ],
   "publishConfig": {
-    "registry": "https://npmjs.com/"
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
